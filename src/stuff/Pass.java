@@ -1,8 +1,11 @@
 package stuff;
 
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public final class Pass {
+    //DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     public final Date expireDate;
     private final double price;
 

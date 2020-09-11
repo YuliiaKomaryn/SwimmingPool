@@ -2,9 +2,12 @@ package stuff;
 
 final public class SwimmingStuff {
     private final String type;
+    private final int price;
 
-    public SwimmingStuff(String type){
+    public SwimmingStuff(String type,
+                         int price){
         this.type = type;
+        this.price = price;
     }
 
     public String getType() {
@@ -15,6 +18,7 @@ final public class SwimmingStuff {
     public String toString() {
         return "SwimmingStuff{" +
                 "type=" + type +
+                ", price=" + price +
                 '}';
     }
 }

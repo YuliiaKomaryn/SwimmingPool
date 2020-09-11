@@ -16,6 +16,11 @@ final public class Employee {
         this.post = post;
     }
 
+
+    public String getPersonalData() {
+        return name + " " + surname;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +

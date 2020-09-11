@@ -17,6 +17,9 @@ final public class SwimmingPool {
         this.length = length;
     }
 
+    public String getName() {
+        return name;
+    }
 
     @Override
     public String toString() {
