@@ -1,17 +1,22 @@
 package persons;
 
 final public class Client {
-    final private PersonalData personalData;
+    final private String name;
+    final private String surname;
 
-    public Client(PersonalData personalData){
-        this.personalData = personalData;
+    public Client(String name,
+                  String surname){
+        this.name = name;
+        this.surname = surname;
     }
 
     @Override
     public String toString() {
-        return "Nurse{" +
-                "person='" + personalData + '\'' +
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 '}';
     }
 }
+
 

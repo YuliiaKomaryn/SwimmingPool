@@ -1,21 +1,27 @@
 package persons;
 
 final public class Employee {
-    final private PersonalData personalData;
-    private double salary;
+    final private String name;
+    final private String surname;
+    final private double salary;
     private String post;
 
-    public Employee(PersonalData personalData,
+    public Employee(String name,
+                    String surname,
                     double salary,
                     String post) {
-        this.personalData = personalData;
         this.salary = salary;
+        this.name = name;
+        this.surname = surname;
+        this.post = post;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "person='" + personalData + '\'' +
+                "person='" + name +
+                ", surname='" + surname +
+                ", post=" + post +
                 '}';
     }
 }
