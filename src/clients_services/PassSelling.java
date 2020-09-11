@@ -1,28 +1,20 @@
 package clients_services;
 
+import java.util.LinkedList;
+
 import stuff.Pass;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class PassSelling {
+    final private double price;
+    final private LinkedList<Pass>  passes = new LinkedList<>();
 
-    private final ArrayList<Pass> passList;
-
-    public PassSelling() {
-        this.passList = new ArrayList<>();
+    public PassSelling(double price) {
+        this.price = price;
     }
 
-    public ArrayList<Pass> getPassList() {
-        return passList;
+    public void addPass(Pass pass){
+        passes.add(pass);
     }
-
-    public void addProduct(Pass pass){
-        passList.add(pass);
-    }
-
-    public void deleteProduct(Pass pass){
-        passList.remove(pass);
-    }
-
-
 }

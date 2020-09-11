@@ -3,7 +3,7 @@ package stuff;
 import java.util.Date;
 
 public final class Pass {
-    private final Date expireDate;
+    public final Date expireDate;
     private final double price;
 
     public Pass(Date expireDate, double price){
