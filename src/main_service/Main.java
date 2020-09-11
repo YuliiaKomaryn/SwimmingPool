@@ -26,10 +26,16 @@ public class Main {
         Locker locker4 = new Locker(4, Boolean.FALSE);
         Locker locker5 = new Locker(5, Boolean.TRUE);
 
-        Admin admin1 = new Admin();
+        PersonalData pd = new PersonalData("Ivan", "Ivanov");
+        Client client1 = new Client(pd);
+
+
+
+
+
 
         System.out.println(
-                "Історія одного басейну \n" + ss1.getType()
+                "Історія одного басейну \n"
         );
 
 

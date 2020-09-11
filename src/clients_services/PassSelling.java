@@ -1,11 +1,8 @@
 package clients_services;
 
-import persons.Admin;
-import persons.Client;
 import stuff.Pass;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 public class PassSelling {
 

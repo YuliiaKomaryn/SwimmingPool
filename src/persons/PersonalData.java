@@ -5,7 +5,7 @@ final public class PersonalData {
     final public String surname;
 
     public PersonalData(String name,
-                  String surname){
+                        String surname){
         this.name = name;
         this.surname = surname;
 

@@ -3,7 +3,7 @@ package persons;
 final public class Client {
     final private PersonalData personalData;
 
-    Client(PersonalData personalData){
+    public Client(PersonalData personalData){
         this.personalData = personalData;
     }
 

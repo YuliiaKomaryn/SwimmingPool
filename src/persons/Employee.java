@@ -1,21 +1,22 @@
 package persons;
 
-final public class Coach {
+final public class Employee {
     final private PersonalData personalData;
     private double salary;
-    private double experience;
+    private String post;
 
-    Coach(PersonalData personalData){
-          //sport
+    public Employee(PersonalData personalData,
+                    double salary,
+                    String post) {
         this.personalData = personalData;
         this.salary = salary;
-        this.experience = experience;
     }
 
     @Override
     public String toString() {
-        return "Coach{" +
+        return "Employee{" +
                 "person='" + personalData + '\'' +
                 '}';
     }
 }
+
