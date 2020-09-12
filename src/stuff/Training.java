@@ -1,4 +1,4 @@
-package activities;
+package stuff;
 
 final public class Training {
     private final int length;

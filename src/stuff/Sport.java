@@ -1,4 +1,4 @@
-package activities;
+package stuff;
 
 final public class Sport {
     private final String type;

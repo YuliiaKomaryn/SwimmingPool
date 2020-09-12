@@ -1,10 +1,10 @@
-package clients_services;
+package services;
 
 import java.util.LinkedList;
 
 import stuff.Locker;
 
-final public class CheckLocker {
+final public class FixLockerService {
     final private LinkedList<Locker>  lockers = new LinkedList<>();
 
     public void addLocker(Locker locker){

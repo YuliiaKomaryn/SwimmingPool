@@ -1,13 +1,10 @@
-package clients_services;
+package services;
 
 import java.util.LinkedList;
 
-import persons.Employee;
 import stuff.Pass;
 
-import java.util.LinkedList;
-
-final public class PassSelling {
+final public class PurchaseService {
     final private LinkedList<Pass>  passes = new LinkedList<>();
 
 

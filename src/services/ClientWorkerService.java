@@ -1,9 +1,9 @@
-package clients_services;
+package services;
 
 import java.util.LinkedList;
 
-import persons.Client;
-import persons.Employee;
+import stuff.Client;
+import stuff.Employee;
 
 final public class ClientWorkerService {
     private final LinkedList<Employee>  employees = new LinkedList<>();

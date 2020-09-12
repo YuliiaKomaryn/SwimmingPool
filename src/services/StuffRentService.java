@@ -1,16 +1,14 @@
-package clients_services;
+package services;
 
 import java.util.LinkedList;
-import java.util.Date;
 
-import persons.Employee;
 import stuff.SwimmingStuff;
 
-final public class StuffRent {
+final public class StuffRentService {
     final private String rentPeriod;
     final private LinkedList<SwimmingStuff>  goods = new LinkedList<>();
 
-    public StuffRent(String rentPeriod) {
+    public StuffRentService(String rentPeriod) {
         this.rentPeriod = rentPeriod;
     }
 

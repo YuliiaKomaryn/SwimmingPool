@@ -1,4 +1,4 @@
-package persons;
+package stuff;
 
 final public class Client {
     final private String name;

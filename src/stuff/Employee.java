@@ -1,4 +1,4 @@
-package persons;
+package stuff;
 
 final public class Employee {
     final private String name;

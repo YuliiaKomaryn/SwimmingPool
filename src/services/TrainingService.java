@@ -1,11 +1,8 @@
-package clients_services;
-
-import stuff.Locker;
+package services;
 
 import java.util.LinkedList;
 
 import stuff.SwimmingPool;
-import stuff.SwimmingStuff;
 
 final public class TrainingService {
     final private LinkedList<SwimmingPool> swimmingPools = new LinkedList<>();

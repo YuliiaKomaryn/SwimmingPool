@@ -1,10 +1,4 @@
-package main_service;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import clients_services.*;
-import persons.*;
+import services.*;
 import stuff.*;
 
 
@@ -51,7 +45,7 @@ public class Main {
         Pass pass2 = new Pass("month", 200);
         Pass pass3 = new Pass("year", 2000);
 
-        PassSelling passSelling = new PassSelling();
+        PurchaseService passSelling = new PurchaseService();
 
         passSelling.addPass(pass1);
         passSelling.addPass(pass2);
@@ -69,7 +63,7 @@ public class Main {
         SwimmingStuff ss4 = new SwimmingStuff("Ласти", 40);
         SwimmingStuff ss5 = new SwimmingStuff("Трубка", 20);
 
-        StuffRent stuffRent = new StuffRent("1 time");
+        StuffRentService stuffRent = new StuffRentService("1 time");
 
         stuffRent.addStuffRent(ss1);
         stuffRent.addStuffRent(ss2);
@@ -88,7 +82,7 @@ public class Main {
         Locker locker2 = new Locker(2, Boolean.FALSE);
         Locker locker3 = new Locker(3, Boolean.TRUE);
 
-        CheckLocker checkLocker = new CheckLocker();
+        FixLockerService checkLocker = new FixLockerService();
 
         checkLocker.addLocker(locker1);
         checkLocker.addLocker(locker2);
@@ -97,7 +91,7 @@ public class Main {
         System.out.println(checkLocker.toString());
 
         System.out.println(
-                "\n\t Басейн готовий зустрічати перих клієнтів. " +
+                "\n\t Басейн готовий зустрічати перших клієнтів. " +
                         "\n\t А ось і вони: "
         );
 
