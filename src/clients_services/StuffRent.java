@@ -6,7 +6,7 @@ import java.util.Date;
 import persons.Employee;
 import stuff.SwimmingStuff;
 
-public class StuffRent {
+final public class StuffRent {
     final private String rentPeriod;
     final private LinkedList<SwimmingStuff>  goods = new LinkedList<>();
 

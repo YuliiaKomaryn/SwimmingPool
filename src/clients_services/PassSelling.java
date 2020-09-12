@@ -7,7 +7,7 @@ import stuff.Pass;
 
 import java.util.LinkedList;
 
-public class PassSelling {
+final public class PassSelling {
     final private LinkedList<Pass>  passes = new LinkedList<>();
 
 

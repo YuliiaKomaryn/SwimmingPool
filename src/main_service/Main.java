@@ -96,11 +96,17 @@ public class Main {
 
         System.out.println(checkLocker.toString());
 
+        System.out.println(
+                "\n\t Басейн готовий зустрічати перих клієнтів. " +
+                        "\n\t А ось і вони: "
+        );
+
         Client client1 = new Client("Єва", "Лонгорія", 36.6);
+        Client client2 = new Client("Сара Джесіка", "Паркер", 36.6);
+        ClientWorkerService clientWorkerService = new ClientWorkerService();
+        clientWorkerService.addClient(client1);
+        clientWorkerService.addClient(client2);
 
-        ClientWorkerService clientWorkerService2 = new ClientWorkerService();
-
-        clientWorkerService2.addClient(client1);
-
+        System.out.println(clientWorkerService.ClientInfo());
     }
 }

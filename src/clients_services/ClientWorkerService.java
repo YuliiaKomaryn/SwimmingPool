@@ -1,16 +1,11 @@
 package clients_services;
 
 import java.util.LinkedList;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 import persons.Client;
 import persons.Employee;
-import stuff.Locker;
 
-import java.util.LinkedList;
-
-public class ClientWorkerService {
+final public class ClientWorkerService {
     private final LinkedList<Employee>  employees = new LinkedList<>();
     private final LinkedList<Client>    clients = new LinkedList<>();
 
@@ -29,6 +24,16 @@ public class ClientWorkerService {
             stringBuilder.append("\n\tPost: ")
                     .append(c.getPost())
                     .append("\t PersonalData: ")
+                    .append(c.getPersonalData());
+        }
+        return stringBuilder.toString();
+    }
+
+    public String ClientInfo(){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("\n\t Clients: ");
+        for(Client c: clients){
+            stringBuilder.append("\n\t PersonalData: ")
                     .append(c.getPersonalData());
         }
         return stringBuilder.toString();

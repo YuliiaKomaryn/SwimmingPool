@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import stuff.Locker;
 
-public class CheckLocker {
+final public class CheckLocker {
     final private LinkedList<Locker>  lockers = new LinkedList<>();
 
     public void addLocker(Locker locker){
@@ -14,9 +14,9 @@ public class CheckLocker {
     @Override
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\nLockers: ");
+        stringBuilder.append("\n\tLockers: ");
         for(Locker c: lockers){
-            stringBuilder.append("\nnumber: ")
+            stringBuilder.append("\n\tnumber: ")
                     .append(c.getNumber())
                     .append("\t Serviceability: ")
                     .append(c.getServiceability());

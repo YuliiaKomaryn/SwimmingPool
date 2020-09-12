@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import stuff.SwimmingPool;
 import stuff.SwimmingStuff;
 
-public class TrainingService {
+final public class TrainingService {
     final private LinkedList<SwimmingPool> swimmingPools = new LinkedList<>();
 
     public void addSwimmingPool(SwimmingPool swimmingPool){
