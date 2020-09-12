@@ -24,6 +24,22 @@ final public class SwimmingPool {
         return name;
     }
 
+    public int getDepth() {
+        return depth;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
     @Override
     public String toString() {
         return "\tSwimmingPool{" +

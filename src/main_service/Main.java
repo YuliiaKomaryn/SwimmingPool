@@ -3,10 +3,7 @@ package main_service;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import clients_services.CheckLocker;
-import clients_services.ClientWorkerService;
-import clients_services.PassSelling;
-import clients_services.StuffRent;
+import clients_services.*;
 import persons.*;
 import stuff.*;
 
@@ -21,7 +18,11 @@ public class Main {
                     "\t Створюємо басейн: ");
 
         SwimmingPool sp1 = new SwimmingPool("Басейн СК КПІ", 10, 25, 50, "вул. Польова, 38.1");
-        System.out.println(sp1.toString());
+        TrainingService trainingService = new TrainingService();
+
+        trainingService.addSwimmingPool(sp1);
+
+        System.out.println(trainingService.toString());
 
         System.out.println(
                 "\n\t Додаємо басейну працівників: ");
@@ -38,7 +39,7 @@ public class Main {
         clientWorkerService1.addEmployee(nurse);
         clientWorkerService1.addEmployee(coach);
 
-        ClientWorkerService.printEmloyees();
+        System.out.println(clientWorkerService1.toString());
 
         System.out.println(
                 "\n\t Оскільки це бізнес, то нам потрібно визначитись з джерелами прибутків.\n" +
@@ -56,7 +57,7 @@ public class Main {
         passSelling.addPass(pass2);
         passSelling.addPass(pass3);
 
-        PassSelling.printPasses();
+        System.out.println(passSelling.toString());
 
         System.out.println(
                 "\n\t Додаємо спорядження для оренди:"
@@ -76,7 +77,7 @@ public class Main {
         stuffRent.addStuffRent(ss4);
         stuffRent.addStuffRent(ss5);
 
-        StuffRent.printStuff();
+        System.out.println(stuffRent.toString());
 
         System.out.println(
                 "\n\t Важливим моментом у створенні довіри до бізнесу є безпека та приватність клієнта. \n" +
@@ -93,7 +94,7 @@ public class Main {
         checkLocker.addLocker(locker2);
         checkLocker.addLocker(locker3);
 
-        CheckLocker.printLockers();
+        System.out.println(checkLocker.toString());
 
         Client client1 = new Client("Єва", "Лонгорія", 36.6);
 

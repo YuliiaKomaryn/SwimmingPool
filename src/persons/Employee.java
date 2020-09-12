@@ -21,6 +21,10 @@ final public class Employee {
         return name + " " + surname;
     }
 
+    public String getPost() {
+        return post;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +

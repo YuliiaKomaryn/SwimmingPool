@@ -14,6 +14,10 @@ final public class SwimmingStuff {
         return type;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
         return "SwimmingStuff{" +

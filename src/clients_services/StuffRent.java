@@ -3,11 +3,12 @@ package clients_services;
 import java.util.LinkedList;
 import java.util.Date;
 
+import persons.Employee;
 import stuff.SwimmingStuff;
 
 public class StuffRent {
     final private String rentPeriod;
-    final static LinkedList<SwimmingStuff>  goods = new LinkedList<>();
+    final private LinkedList<SwimmingStuff>  goods = new LinkedList<>();
 
     public StuffRent(String rentPeriod) {
         this.rentPeriod = rentPeriod;
@@ -17,10 +18,16 @@ public class StuffRent {
         goods.add(swimmingStuff);
     }
 
-    public static void printStuff()
-    {
-        System.out.println("\tStuff: " );
-        for (int i = 0; i < goods.size(); i++)
-            System.out.println("\t" + goods.get(i));
+    public String toString(){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("\n\t Stuff for rent: ");
+        for(SwimmingStuff c: goods){
+            stringBuilder.append("\n\tType: ")
+                    .append(c.getType())
+                    .append("\t Price: ")
+                    .append(c.getPrice());
+        }
+        return stringBuilder.toString();
     }
+
 }

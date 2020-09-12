@@ -6,12 +6,13 @@ import java.util.Arrays;
 
 import persons.Client;
 import persons.Employee;
+import stuff.Locker;
 
 import java.util.LinkedList;
 
 public class ClientWorkerService {
-    private static LinkedList<Employee>  employees = new LinkedList<>();
-    private static LinkedList<Client>    clients = new LinkedList<>();
+    private final LinkedList<Employee>  employees = new LinkedList<>();
+    private final LinkedList<Client>    clients = new LinkedList<>();
 
     public void addEmployee(Employee employee){
         employees.add(employee);
@@ -21,20 +22,18 @@ public class ClientWorkerService {
         clients.add(client);
     }
 
-    public static void printEmloyees()
-    {
-        System.out.println("\tEmployees: " );
-        for (int i = 0; i < employees.size(); i++)
-            System.out.println("\t" + employees.get(i));
+    public String toString(){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("\n\t Employees: ");
+        for(Employee c: employees){
+            stringBuilder.append("\n\tPost: ")
+                    .append(c.getPost())
+                    .append("\t PersonalData: ")
+                    .append(c.getPersonalData());
+        }
+        return stringBuilder.toString();
     }
 
-
 }
-    /*@Override
-    public String toString() {
-        return "ClientWorkerService{" +
-                "employees=" + employees +
-                ", clients='" + clients +
-                '}';
-    }*/
+
 
