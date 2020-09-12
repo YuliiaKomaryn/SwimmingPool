@@ -7,14 +7,17 @@ import stuff.Pass;
 import java.util.LinkedList;
 
 public class PassSelling {
-    final private double price;
-    final private LinkedList<Pass>  passes = new LinkedList<>();
+    final static private LinkedList<Pass>  passes = new LinkedList<>();
 
-    public PassSelling(double price) {
-        this.price = price;
-    }
 
     public void addPass(Pass pass){
         passes.add(pass);
+    }
+
+    public static void printPasses()
+    {
+        System.out.println("\tPasses: " );
+        for (int i = 0; i < passes.size(); i++)
+            System.out.println("\t" + passes.get(i));
     }
 }

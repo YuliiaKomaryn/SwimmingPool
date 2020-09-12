@@ -3,7 +3,9 @@ package main_service;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import clients_services.CheckLocker;
 import clients_services.ClientWorkerService;
+import clients_services.PassSelling;
 import clients_services.StuffRent;
 import persons.*;
 import stuff.*;
@@ -44,7 +46,17 @@ public class Main {
                         "\t Додаємо різновиди абонементів:"
         );
 
-        // Додати абонементи
+        Pass pass1 = new Pass("1 time", 50);
+        Pass pass2 = new Pass("month", 200);
+        Pass pass3 = new Pass("year", 2000);
+
+        PassSelling passSelling = new PassSelling();
+
+        passSelling.addPass(pass1);
+        passSelling.addPass(pass2);
+        passSelling.addPass(pass3);
+
+        PassSelling.printPasses();
 
         System.out.println(
                 "\n\t Додаємо спорядження для оренди:"
@@ -56,22 +68,32 @@ public class Main {
         SwimmingStuff ss4 = new SwimmingStuff("Ласти", 40);
         SwimmingStuff ss5 = new SwimmingStuff("Трубка", 20);
 
-        ArrayList<SwimmingStuff> stuffForRent = new ArrayList<>(Arrays.asList(ss1, ss2, ss3, ss4, ss5));
+        StuffRent stuffRent = new StuffRent("1 time");
 
-        System.out.println(stuffForRent.toString());
+        stuffRent.addStuffRent(ss1);
+        stuffRent.addStuffRent(ss2);
+        stuffRent.addStuffRent(ss3);
+        stuffRent.addStuffRent(ss4);
+        stuffRent.addStuffRent(ss5);
+
+        StuffRent.printStuff();
 
         System.out.println(
                 "\n\t Важливим моментом у створенні довіри до бізнесу є безпека та приватність клієнта. \n" +
-                        "\n\t Це саме час додати шафки-локери для особистих речей:"
+                        "\t Це саме час додати шафки-локери для особистих речей:"
         );
 
         Locker locker1 = new Locker(1, Boolean.TRUE);
         Locker locker2 = new Locker(2, Boolean.FALSE);
         Locker locker3 = new Locker(3, Boolean.TRUE);
-        Locker locker4 = new Locker(4, Boolean.FALSE);
-        Locker locker5 = new Locker(5, Boolean.TRUE);
 
-        ArrayList<Locker> lockersToChoose = new ArrayList<>(Arrays.asList(locker1, locker2, locker3, locker4, locker5));
+        CheckLocker checkLocker = new CheckLocker();
+
+        checkLocker.addLocker(locker1);
+        checkLocker.addLocker(locker2);
+        checkLocker.addLocker(locker3);
+
+        CheckLocker.printLockers();
 
         Client client1 = new Client("Єва", "Лонгорія", 36.6);
 

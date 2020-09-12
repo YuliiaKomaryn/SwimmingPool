@@ -6,17 +6,21 @@ import java.util.Date;
 import stuff.SwimmingStuff;
 
 public class StuffRent {
-    final private Date rentPeriod;
-    final private double price;
-    final private LinkedList<SwimmingStuff>  goods = new LinkedList<>();
+    final private String rentPeriod;
+    final static LinkedList<SwimmingStuff>  goods = new LinkedList<>();
 
-    public StuffRent(Date rentPeriod,
-                     double price) {
-        this.price = price;
+    public StuffRent(String rentPeriod) {
         this.rentPeriod = rentPeriod;
     }
 
     public void addStuffRent(SwimmingStuff swimmingStuff){
         goods.add(swimmingStuff);
+    }
+
+    public static void printStuff()
+    {
+        System.out.println("\tStuff: " );
+        for (int i = 0; i < goods.size(); i++)
+            System.out.println("\t" + goods.get(i));
     }
 }
