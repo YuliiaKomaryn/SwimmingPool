@@ -63,4 +63,5 @@ public class Main {
 
         mainService.addClient("Єва", "Лонгорія", 36.6);
 
+    }
 }
