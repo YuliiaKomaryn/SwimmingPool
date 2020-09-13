@@ -1,9 +1,10 @@
 package main;
 
+import model.*;
 import service.*;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.LinkedList;
 
 public final class MainService {
     private final ClientWorkerService clientWorkerService = new ClientWorkerService();
@@ -30,8 +31,8 @@ public final class MainService {
     }
 
     public void addClient(String name,
-                            String surname,
-                            double temperature) {
+                          String surname,
+                          double temperature) {
         clientWorkerService.addClient(name, surname, temperature);
         System.out.println("\tДодавання клієнта: " + name + " " + surname);
     }
@@ -57,4 +58,6 @@ public final class MainService {
         System.out.println("\t Додавання шафки : номер - "
                 + number + "; справність - " + serviceability);
     }
+
+
 }

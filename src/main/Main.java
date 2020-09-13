@@ -1,6 +1,9 @@
 package main;
 
 import java.time.LocalDate;
+import java.util.LinkedList;
+
+import main.MainService;
 
 public class Main {
     public static void main(String[] args) {
@@ -54,12 +57,10 @@ public class Main {
         mainService.addLocker(3, Boolean.TRUE);
 
         System.out.println(
-                "\n\t Басейн готовий зустрічати перших клієнтів. " +
-                        "\n\t А ось і вони: "
+                "\n\t Басейн готовий зустрічати першого клієнта. " +
+                        "\n\t А ось і він: "
         );
 
         mainService.addClient("Єва", "Лонгорія", 36.6);
-        mainService.addClient("Сара Джесіка", "Паркер", 36.6);
 
-    }
 }

@@ -2,10 +2,11 @@ package service;
 
 import java.util.LinkedList;
 
-import model.SwimmingPool;
+import model.*;
 
 public final class TrainingService {
     private final LinkedList<SwimmingPool> swimmingPools = new LinkedList<>();
+    private final LinkedList<Training> trainings = new LinkedList<>();
 
     public SwimmingPool addSwimmingPool(String name,
                                         int width,
@@ -17,6 +18,16 @@ public final class TrainingService {
         swimmingPools.add(tempSwimmingPool);
 
         return tempSwimmingPool;
+    }
+
+
+    public void createTraining(Client client,
+                               Pass pass,
+                               Sport sport,
+                               Employee employee,
+                               SwimmingStuff swimmingStuff) {
+        Training tempTraining = new Training(client, pass, sport, employee, swimmingStuff);
+        trainings.add(tempTraining);
     }
 
     @Override

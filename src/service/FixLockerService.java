@@ -1,21 +1,25 @@
 package service;
 
-import java.time.LocalDate;
 import java.util.LinkedList;
 
-import model.Client;
 import model.Locker;
 
 public final class FixLockerService {
-    private final LinkedList<Locker> lockers = new LinkedList<>();
+    private LinkedList<Locker> lockers = new LinkedList<>();
 
-    public Locker addLocker(int number,
-                               boolean serviceability) {
+    public void addLocker(int number,
+                          boolean serviceability) {
 
         Locker tempLocker = new Locker(number, serviceability);
         lockers.add(tempLocker);
+    }
 
-        return tempLocker;
+    public void fixLocker(LinkedList<Locker> lockers) {
+        for (Locker locker : lockers) {
+            if (!locker.getServiceability()) {
+                locker.setServiceability(true);
+            }
+        }
     }
 
     @Override

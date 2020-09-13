@@ -2,11 +2,15 @@ package model;
 
 public final class Locker {
     private final int number;
-    private final Boolean serviceability;
+    private Boolean serviceability;
 
     public Locker(int number,
                   Boolean serviceability) {
         this.number = number;
+        this.serviceability = serviceability;
+    }
+
+    public void setServiceability(boolean serviceability) {
         this.serviceability = serviceability;
     }
 

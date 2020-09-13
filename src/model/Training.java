@@ -1,20 +1,22 @@
 package model;
 
-public final class Training {
-    private final int length;
+public class Training {
+    Client client;
+    Pass pass;
+    Sport sport;
+    Employee employee;
+    SwimmingStuff swimmingStuff;
 
-    Training(int length) {
-        this.length = length;
+    public Training(Client client,
+                    Pass pass,
+                    Sport sport,
+                    Employee employee,
+                    SwimmingStuff swimmingStuff) {
+        this.client = client;
+        this.pass = pass;
+        this.sport = sport;
+        this.employee = employee;
+        this.swimmingStuff = swimmingStuff;
     }
 
-    public int getType() {
-        return length;
-    }
-
-    @Override
-    public String toString() {
-        return "Training{" +
-                "length=" + length +
-                '}';
-    }
 }
