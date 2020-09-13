@@ -1,18 +1,24 @@
-package stuff;
+package model;
 
-import java.time.format.DateTimeFormatter;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Date;
 
 public final class Pass {
-    //DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    public LocalDate expireDate;
     public final String type;
     private final int price;
 
-    public Pass(String type, int price){
+    public Pass(String type,
+                int price,
+                LocalDate expireDate) {
         this.type = type;
         this.price = price;
+        this.expireDate = expireDate;
     }
+
+    //public Date setDateByType() {
+
+    //}
 
     public String getType() {
         return type;
@@ -26,7 +32,7 @@ public final class Pass {
     public String toString() {
         return "Pass{" +
                 "type=" + type +
-                ", price=" + price+
+                ", price=" + price +
                 '}';
     }
 }

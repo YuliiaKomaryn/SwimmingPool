@@ -1,11 +1,11 @@
-package stuff;
+package model;
 
 public final class Locker {
     private final int number;
     private final Boolean serviceability;
 
     public Locker(int number,
-                  Boolean serviceability){
+                  Boolean serviceability) {
         this.number = number;
         this.serviceability = serviceability;
     }

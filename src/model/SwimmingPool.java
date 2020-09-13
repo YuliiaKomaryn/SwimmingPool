@@ -1,6 +1,6 @@
-package stuff;
+package model;
 
-final public class SwimmingPool {
+public final class SwimmingPool {
     private final String name;
     private final int depth;
     private final int width;
@@ -11,7 +11,7 @@ final public class SwimmingPool {
                         int depth,
                         int width,
                         int length,
-                        String adress){
+                        String adress) {
 
         this.name = name;
         this.depth = depth;

@@ -1,6 +1,6 @@
-package stuff;
+package model;
 
-final public class Training {
+public final class Training {
     private final int length;
 
     Training(int length) {

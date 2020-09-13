@@ -1,13 +1,13 @@
-package stuff;
+package model;
 
-final public class Client {
-    final private String name;
-    final private String surname;
-    final private double temperature;
+public final class Client {
+    private final String name;
+    private final String surname;
+    private final double temperature;
 
     public Client(String name,
                   String surname,
-                  double temperature){
+                  double temperature) {
         this.name = name;
         this.surname = surname;
         this.temperature = temperature;

@@ -1,9 +1,9 @@
-package stuff;
+package model;
 
-final public class Employee {
-    final private String name;
-    final private String surname;
-    final private double salary;
+public final class Employee {
+    private final String name;
+    private final String surname;
+    private final double salary;
     private String post;
 
     public Employee(String name,

@@ -1,6 +1,6 @@
-package stuff;
+package model;
 
-final public class SwimmingStuff {
+public final class SwimmingStuff {
     private final String type;
     private final int price;
 
